@@ -7,40 +7,50 @@ import UIKit
 
 class TableViewController: UITableViewController {
 	
+	var titleList = ["Big Ben", "Buckingham Palace", "London Eye", "St-Pauls Cathedral", "Tower Bridge", "Westminster Abbey"]
+
+	var descriptionList = ["London SW1A 0AA", "London SW1A 1AA", "London SE1 7PB", "London EC4M 8AD", "London SE1 2UP", "London SW1P 3PA"]
+
+	var imageList = ["BigBen", "BuckinghamPalace", "LondonEye", "St-Pauls", "TowerBridge", "WestminsterAbbey"]
+
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		// Uncomment the following line to preserve selection between presentations
 		// self.clearsSelectionOnViewWillAppear = false
 		
-		// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-		// self.navigationItem.rightBarButtonItem = self.editButtonItem
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 	}
 
 	
 	// MARK: - Table view data source
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
-		// #warning Incomplete implementation, return the number of sections
-		return 0
+		return 1
 	}
 	
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		// #warning Incomplete implementation, return the number of rows
-		return 0
+		return titleList.count
 	}
-	
-	
-	/*
+
+
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-	let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-	
-	// Configure the cell...
-	
-	return cell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+
+		cell.cellTitle.text = titleList[indexPath.row]
+		cell.cellDescription.text = descriptionList[indexPath.row]
+		cell.cellImageView.image = UIImage(named: imageList[indexPath.row])
+
+		return cell
 	}
-	*/
+
+
+//	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//		super.tableView(tableView, didSelectRowAt: indexPath)
+//	}
+
 	
 	/*
 	// Override to support conditional editing of the table view.
@@ -76,15 +86,19 @@ class TableViewController: UITableViewController {
 	return true
 	}
 	*/
+
 	
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	// Get the new view controller using segue.destinationViewController.
-	// Pass the selected object to the new view controller.
+		if (segue.identifier == "showDetail") {
+			let detailVC = segue.destination as! DetailViewController
+
+			if let indexPath = self.tableView.indexPathForSelectedRow {
+				detailVC.sendData1 = titleList[indexPath.row]
+				detailVC.sendData2 = descriptionList[indexPath.row]
+				detailVC.sendData3 = imageList[indexPath.row]
+			}
+		}
 	}
-	*/
+
 	
 }

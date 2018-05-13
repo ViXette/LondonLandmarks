@@ -1,30 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9pM-Ba-tvd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R43-Ai-0es">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--London Landmarks-->
         <scene sceneID="DpQ-bH-ZNR">
             <objects>
                 <tableViewController id="9pM-Ba-tvd" customClass="TableViewController" customModule="LondonLandmarks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b7J-EV-MoE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="83j-Gf-R6q" customClass="TableViewCell" customModule="LondonLandmarks" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="83j-Gf-R6q" customClass="TableViewCell" customModule="LondonLandmarks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="83j-Gf-R6q" id="sbb-nC-xlO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Westminster Abbey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QxB-KQ-pL0">
+                                            <rect key="frame" x="136" y="4" width="231" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="HHI-94-hif"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                            <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London, Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3UA-hS-peK">
+                                            <rect key="frame" x="136" y="55.5" width="231" height="40"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WestminsterAbbey" translatesAutoresizingMaskIntoConstraints="NO" id="TAD-be-5Ug">
+                                            <rect key="frame" x="8" y="4" width="120" height="92"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="BKS-8j-7IP"/>
+                                                <constraint firstAttribute="height" constant="92" id="meP-GK-e1x"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QxB-KQ-pL0" firstAttribute="leading" secondItem="TAD-be-5Ug" secondAttribute="trailing" constant="8" id="6aV-sp-7Bz"/>
+                                        <constraint firstItem="3UA-hS-peK" firstAttribute="width" secondItem="QxB-KQ-pL0" secondAttribute="width" id="HWj-6S-RI9"/>
+                                        <constraint firstItem="QxB-KQ-pL0" firstAttribute="top" secondItem="sbb-nC-xlO" secondAttribute="top" constant="4" id="Mgn-w7-VJ2"/>
+                                        <constraint firstAttribute="bottom" secondItem="TAD-be-5Ug" secondAttribute="bottom" constant="4" id="Zh6-Ar-7z0"/>
+                                        <constraint firstItem="3UA-hS-peK" firstAttribute="leading" secondItem="TAD-be-5Ug" secondAttribute="trailing" constant="8" id="cpT-KC-GXj"/>
+                                        <constraint firstAttribute="trailing" secondItem="QxB-KQ-pL0" secondAttribute="trailing" constant="8" id="hoN-lQ-OjM"/>
+                                        <constraint firstAttribute="trailing" secondItem="3UA-hS-peK" secondAttribute="trailing" constant="8" id="kLh-Xu-pGK"/>
+                                        <constraint firstItem="3UA-hS-peK" firstAttribute="height" secondItem="QxB-KQ-pL0" secondAttribute="height" id="mq3-hU-o0c"/>
+                                        <constraint firstItem="TAD-be-5Ug" firstAttribute="leading" secondItem="sbb-nC-xlO" secondAttribute="leading" constant="8" id="nxe-hu-uHm"/>
+                                        <constraint firstAttribute="bottom" secondItem="3UA-hS-peK" secondAttribute="bottom" constant="4" id="wPa-rz-RU0"/>
+                                        <constraint firstItem="TAD-be-5Ug" firstAttribute="top" secondItem="sbb-nC-xlO" secondAttribute="top" constant="4" id="xPa-qN-qyW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellDescription" destination="3UA-hS-peK" id="ami-7J-5nz"/>
+                                    <outlet property="cellImageView" destination="TAD-be-5Ug" id="WNb-Qn-uco"/>
+                                    <outlet property="cellTitle" destination="QxB-KQ-pL0" id="vtw-RF-QPd"/>
+                                    <segue destination="RPj-SG-kzy" kind="show" identifier="showDetail" id="F0K-Va-5Gp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,10 +76,137 @@
                             <outlet property="delegate" destination="9pM-Ba-tvd" id="6kE-mx-nHY"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="London Landmarks" id="JsX-oe-HOp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PoU-hc-myT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36" y="5"/>
+            <point key="canvasLocation" x="790" y="5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="8uD-Hv-72h">
+            <objects>
+                <viewController id="RPj-SG-kzy" customClass="DetailViewController" customModule="LondonLandmarks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6i-UJ-Z0E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Westminster Abbey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xYJ-MF-5g3">
+                                <rect key="frame" x="12" y="153.5" width="351" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SdO-xv-51E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WestminsterAbbey" translatesAutoresizingMaskIntoConstraints="NO" id="pDn-IZ-qje">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="145.5"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8G-TL-2fs">
+                                <rect key="frame" x="12" y="239.5" width="351" height="145.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NOU-eg-mmx">
+                                <rect key="frame" x="12" y="393" width="351" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="C0s-oG-HYG"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6l-kp-O7c">
+                                <rect key="frame" x="12" y="551" width="351" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NR2-tk-XBZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Directions"/>
+                                <connections>
+                                    <action selector="directionsTapped:" destination="RPj-SG-kzy" eventType="touchUpInside" id="0Ae-0L-Vt4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London, Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IEx-Kg-YeE">
+                                <rect key="frame" x="12" y="201.5" width="351" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xl5-7l-141"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R8G-TL-2fs" firstAttribute="height" secondItem="pDn-IZ-qje" secondAttribute="height" id="0sm-1v-rgw"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="trailing" secondItem="NOU-eg-mmx" secondAttribute="trailing" constant="12" id="3X5-wv-e8U"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="trailing" secondItem="IEx-Kg-YeE" secondAttribute="trailing" constant="12" id="7sN-dy-fTd"/>
+                            <constraint firstItem="pDn-IZ-qje" firstAttribute="trailing" secondItem="jA6-Bu-KeG" secondAttribute="trailing" id="8bp-Sd-Gj0"/>
+                            <constraint firstItem="IEx-Kg-YeE" firstAttribute="top" secondItem="xYJ-MF-5g3" secondAttribute="bottom" constant="8" id="Ati-YP-uWT"/>
+                            <constraint firstItem="NOU-eg-mmx" firstAttribute="top" secondItem="R8G-TL-2fs" secondAttribute="bottom" constant="8" id="C6X-g5-GYo"/>
+                            <constraint firstItem="IEx-Kg-YeE" firstAttribute="top" secondItem="xYJ-MF-5g3" secondAttribute="bottom" constant="8" id="NXj-ja-zmg"/>
+                            <constraint firstItem="IEx-Kg-YeE" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" constant="12" id="OLw-bp-oLJ"/>
+                            <constraint firstItem="NOU-eg-mmx" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" constant="12" id="Oqb-Hq-hCh"/>
+                            <constraint firstItem="b6l-kp-O7c" firstAttribute="top" secondItem="NOU-eg-mmx" secondAttribute="bottom" constant="8" id="Q62-Uf-fYn"/>
+                            <constraint firstItem="xYJ-MF-5g3" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" constant="12" id="QYH-8f-PBp"/>
+                            <constraint firstItem="xYJ-MF-5g3" firstAttribute="top" secondItem="pDn-IZ-qje" secondAttribute="bottom" constant="8" id="R2E-6X-7wX"/>
+                            <constraint firstItem="R8G-TL-2fs" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" constant="12" id="RJ0-uk-WRH"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="trailing" secondItem="R8G-TL-2fs" secondAttribute="trailing" constant="12" id="TqC-eD-Tcl"/>
+                            <constraint firstItem="xYJ-MF-5g3" firstAttribute="top" secondItem="pDn-IZ-qje" secondAttribute="bottom" constant="8" id="VUo-7Q-Rmb"/>
+                            <constraint firstItem="pDn-IZ-qje" firstAttribute="top" secondItem="jA6-Bu-KeG" secondAttribute="top" id="ZSw-kx-hvZ"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="trailing" secondItem="b6l-kp-O7c" secondAttribute="trailing" constant="12" id="eL9-iS-Xli"/>
+                            <constraint firstItem="pDn-IZ-qje" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" id="eol-Gk-8br"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="bottom" secondItem="b6l-kp-O7c" secondAttribute="bottom" constant="12" id="jqR-X4-hjp"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="trailing" secondItem="xYJ-MF-5g3" secondAttribute="trailing" constant="12" id="l7I-yo-Uvo"/>
+                            <constraint firstItem="R8G-TL-2fs" firstAttribute="top" secondItem="IEx-Kg-YeE" secondAttribute="bottom" constant="8" id="lel-nK-AVS"/>
+                            <constraint firstItem="b6l-kp-O7c" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" constant="12" id="nU8-bf-dMa"/>
+                            <constraint firstItem="NOU-eg-mmx" firstAttribute="top" secondItem="R8G-TL-2fs" secondAttribute="bottom" constant="8" id="oYW-cI-2KO"/>
+                            <constraint firstItem="xYJ-MF-5g3" firstAttribute="leading" secondItem="jA6-Bu-KeG" secondAttribute="leading" constant="12" id="opQ-pg-eay"/>
+                            <constraint firstItem="jA6-Bu-KeG" firstAttribute="trailing" secondItem="xYJ-MF-5g3" secondAttribute="trailing" constant="12" id="zxi-Ad-Azi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jA6-Bu-KeG"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailDescription" destination="IEx-Kg-YeE" id="Pai-wl-IzV"/>
+                        <outlet property="detailImageView" destination="pDn-IZ-qje" id="xa0-fN-UnT"/>
+                        <outlet property="detailMapView" destination="NOU-eg-mmx" id="PPB-Ml-7Dr"/>
+                        <outlet property="detailText" destination="R8G-TL-2fs" id="zIL-Fh-vd2"/>
+                        <outlet property="detailTitle" destination="xYJ-MF-5g3" id="daR-fh-dPL"/>
+                        <outlet property="directionButton" destination="b6l-kp-O7c" id="ykH-EX-Rff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhW-EW-Abd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557.9710144927537" y="-1.6304347826086958"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9ha-ti-oCa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R43-Ai-0es" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="5xV-qr-zVS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pM-Ba-tvd" kind="relationship" relationship="rootViewController" id="idb-Yh-ohe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QpZ-do-Z1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="4.8913043478260869"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WestminsterAbbey" width="1000" height="667"/>
+    </resources>
 </document>
